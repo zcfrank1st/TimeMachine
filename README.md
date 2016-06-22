@@ -10,9 +10,9 @@ Pattern
 
 \#{yyyy-MM-dd - 1day} // 根据pattern和偏移量计算, 下同:
 
-\#{yyyy-MM-dd - 1week}
+\#{yyyy-MM-dd + 1week}
 
-\#{yyyy-MM-dd - 1month}
+\#{yyyy-MM-dd + 1month}
 
 \#{yyyy-MM-dd - 1year}
 
