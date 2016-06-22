@@ -7,9 +7,8 @@ import org.joda.time.format.DateTimeFormat
   */
 class Transformer {
   def transform(content: String)(date: String): String = {
-
     val pattern = """(.*)(\#\{)(yyyy-MM-dd) (\W) (\d)(\w+)(})(.*)""".r
-    val pattern(prefix, _, timePattern, action, offset, unit, _, postfix) = content
+    val pattern(prefix, _, timePattern, action, offset, unit, _, postfix) = content.replaceAll(System.lineSeparator(), " ")
 
     val dtf = DateTimeFormat.forPattern("yyyy-MM-dd")
     val now = dtf.parseDateTime(date)
